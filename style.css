@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+/*
+обнуляющий стиль 
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+*,*::after,*::before{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0;border: 0;}
+a, a:visited,a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+ */
+
+
+
+
+body{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    color:black;
+    text-decoration: none;
+}
+a:hover{
+    opacity: 0.5;
+    /* background:sandybrown; */
+}
+a:active{
+    color: blueviolet;
+}
+a:visited{
+    color:#86898f;
+}
+.avatar{
+    width: 200px;
+    border-radius: 20px;
+    box-shadow:4px 4px 14px black;
+}
+.info{ 
+    display: flex;
+    margin-bottom: 20px;
+}
+
+/*в случае маленького экрана*/
+@media (max-width:700px) {
+    .info{
+        text-align: center;
+        display: block;
+    }
+}
+
+.infotext{
+    margin-left: 40px;
+}
+.infotext h1{
+    margin-bottom: 10px;
+}
+.infotext h4{
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+.info p{
+    color:#86898f;
+    margin:0;
+    font-style: italic;
+    font-weight: bold;
+    /* text-decoration: underline red; */
+    text-decoration: none;
+    /* text-transform: lowercase; */
+    /* letter-spacing: 3px; */
+    /* word-spacing: 10px; */
+}
+
+/* box model */
+.container{
+    padding-top: 30px;
+    max-width: 750px;
+    margin: auto;/* контент по середке */
+
+}
+
+/* .social{
+    background: green;
+    padding: 15px 40px 12px 14px;внутренний отступ (контента от границ)
+    border: 5px solid red;
+    margin: 15px; внешний отступ 
+    
+}*/
+/* .box-model > div{
+    float: left;
+    background: black;
+    height: 200px;
+    border:4px solid red;
+    width: 25%;
+    box-sizing: border-box; рамка(border) учитывается при вычислении ширины
+} */
+.info{
+    margin-bottom: 20px;
+}
+.card{
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+.card h2{
+    margin-bottom: 10px;
+}
+.bg-red{
+    background: #ffe5e5;
+} 
+.list{
+    padding: 0 20px;
+}
+.list li{
+    color: #86898f;
+    margin-bottom: 10px;
+    /* border-bottom: 1px solid black; */
+}
+.bg-yellow{
+    background: #fff9dc;
+}
+.bg-green{
+    background: #e5ffe7;
+}
+.table{
+    width: 100%;
+}
+.table td{
+    padding-bottom: 10px;
+}
+.table td:nth-child(2){
+    color: #86898f;/*текст значений второго столбца серый*/
+}
+/* .table tr:nth-child(1),.table tr:nth-child(4){
+    background: red;окрас 1 и 4 строки в красный
+} */
+.table tr:nth-child(even){
+    background: wheat;
+}
+.link-list{
+    list-style: none;
+    /* list-style: url("https://img.icons8.com/material-outlined/24/000000/marker-a.png"); */
+    padding: 0;/*убираем красную строку*/
+}
+.link-list li{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.contact h2{
+    text-align: center;
+}
+.form-group label{
+    display: block;
+    font-size:inherit;
+    color: #86898f;
+}
+.form-group input,.form-group textarea{
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    /* background: transparent; */
+    border-bottom: 1px solid #ccc;
+    padding: 5px 0px;
+    margin: 10px 0px;
+    outline: none;
+    font-family: inherit;
+    outline: none;
+}
+.row{
+    display: flex;
+    margin-bottom: 20px;
+}
+.row > .form-group{
+    width:50%;
+}
+.row > .form-group:first-child{
+    margin-right: 20px;
+}
+.btn{
+    background:#86898f;
+    color:black;
+    border: none;
+    border-radius: 5px; 
+    padding: 10px 50px;
+    cursor: pointer;
+    font-family: inherit;
+}
+.btn:hover{
+    opacity: 0.9;
+}
+
+/*position*/
+/* .position{
+    border: 4px solid black;
+    margin-top: 40px;
+    padding: 20px;
+} */
+
+/*absolute-относительно окна 
+    браузера, но если в предке position-relative, 
+    то предок, управляет детьми относительно себя, 
+    в том числе и "box"
+    fixed-для подвижного окна*/
+
+/* попробуй в box написать
+position: fixed; или position: absolute; */
+
+ /* .box{
+    top: 0px;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    background:skyblue;
+} */
